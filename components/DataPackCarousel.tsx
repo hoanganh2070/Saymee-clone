@@ -18,8 +18,8 @@ export function DataPackCarousel() {
         <div className="">
             <div className='text-[28px] mb-[20px]' style={{ fontWeight: '700', lineHeight: '40px' }}>Gói cước đi kèm nhiều bất ngờ</div>
             <MotionDiv initial={{ opacity: 0, translateX: -200}}
-                            animate={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 0.5 }} className="container text-left">
+                            whileInView={{ opacity: 1, translateX: 0}}
+                            transition={{ duration: 1 }} className="container text-left">
                 <Carousel
                     opts={{
                         align: "start",

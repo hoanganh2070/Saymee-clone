@@ -11,11 +11,14 @@ import {
 } from "@/components/ui/carousel"
 
 import { NewsList } from "@/models/NewsList"
+import { MotionDiv } from "./ui/MotionDiv"
 export function NewsCarousel() {
     return (
         <div className="w-full text-center mb-10">
             <div className='text-[28px] mt-[40px] mb-[20px]' style={{ fontWeight: '700', lineHeight: '40px' }}>Bản tin Saymee</div>
-            <div className="container text-left">
+            <MotionDiv initial={{ opacity: 0, translateX: -200}}
+                            whileInView={{ opacity: 1, translateX: 0}}
+                            transition={{ duration: 1 }}  className="container text-left">
                 <Carousel
                     opts={{
                         align: "start",
@@ -59,7 +62,7 @@ export function NewsCarousel() {
                     <CarouselPrevious className="text-pinksaymee hover:text-pinksaymee w-[40px] h-[40px] hover:bg-[#FFECF9]" />
                     <CarouselNext className="text-pinksaymee hover:text-pinksaymee w-[40px] h-[40px] hover:bg-[#FFECF9]" />
                 </Carousel>
-            </div>
+            </MotionDiv>
         </div>
     )
 }

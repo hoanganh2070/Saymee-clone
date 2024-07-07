@@ -1,9 +1,12 @@
 import React from 'react'
+import { MotionDiv } from './ui/MotionDiv'
 
 export default function AppContainer() {
     return (
-        <div className='container flex mt-[40px]'>
-            <div className='w-1/2 flex flex-col  justify-center items-center'>
+        <div className='container flex mt-[40px] overflow-hidden'>
+            <MotionDiv initial={{ opacity: 0, translateX: 200}}
+                            whileInView={{ opacity: 1, translateX: 0}}
+                            transition={{ duration: 1 }} className='w-1/2 flex flex-col  justify-center items-center'>
                 <div className='w-2/3'>
                     <div className='font-bold text-[28px]'>Khám phá bản thân </div>
                     <div className='font-bold text-[28px]'>qua ứng dụng Saymee </div>
@@ -26,10 +29,12 @@ export default function AppContainer() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='w-1/2'>
+            </MotionDiv>
+            <MotionDiv initial={{ opacity: 0, translateX: 200}}
+                            whileInView={{ opacity: 1, translateX: 0}}
+                            transition={{ duration: 1 }} className='w-1/2'>
                 <img src='/saymee_app.png'></img>
-            </div>
+            </MotionDiv>
         </div>
     )
 }

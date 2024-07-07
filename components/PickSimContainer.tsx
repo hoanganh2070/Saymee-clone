@@ -6,12 +6,12 @@ export default function PickSimContainer() {
     return (
         <div className='container mt-10 flex gap-7'>
             <MotionDiv className='w-1/3' initial={{ opacity: 0, translateX: -100}}
-                            animate={{ opacity: 1, translateX: 0}}
+                            whileInView={{ opacity: 1, translateX: 0}}
                             transition={{ duration: 0.5 }}>
                 <img src='saymee_sim_card.png'></img>
             </MotionDiv>
             <MotionDiv initial={{ opacity: 0, translateX: 100}}
-                            animate={{ opacity: 1, translateX: 0}}
+                            whileInView={{ opacity: 1, translateX: 0}}
                             transition={{ duration: 0.5 }} className='w-2/3 flex flex-col items-center space-y-6'>
                 <span className='text-[28px]' style={{ fontWeight: '700', lineHeight: '40px' }}>SIM Saymee, chọn là Mê</span>
                 <div className="grid grid-rows-3 grid-cols-2 gap-5 w-full ">
