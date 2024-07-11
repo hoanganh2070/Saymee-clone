@@ -160,3 +160,18 @@ body {
   font-size: 20px;
   line-height: 27px;
 }
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.snap-mandatory {
+  border-radius: 0;
+ }
+
+
+ #backdrop{
+  max-height: calc(100vh - 60px) !important;
+ }
+
+

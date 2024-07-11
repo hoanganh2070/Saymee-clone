@@ -1,25 +1,57 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { use, useEffect, useState } from 'react'
 import Button from './ui/SaymeeButton'
 import Link from 'next/link'
 import Dropdown from './ui/Dropdown'
 import { ProductDropDownItems } from '@/models/ProductDropdownList'
 import { UtilityDropDownItems } from '@/models/UtilityDropDownList'
 import CartDropdown from './ui/CartDropdown'
+import MobileBackDrop from './MobileBackDrop'
+import { AnimatePresence } from 'framer-motion'
 
 export default function Header() {
+
+  const [isOpen, setIsOpen] = useState(false)
+
+
+  useEffect(() => {
+    const handleClickOutside = (e : any) => {
+      const backdropElement = document.getElementById('backdrop');
+      if (isOpen && backdropElement && !backdropElement.contains(e.target)) {
+        setIsOpen(false);
+        document.body.style.overflow = 'auto';
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const arrNavItemLinks = ["Why Saymee?", "Sản phẩm", "Tiện ích", "Saymee Loyalty", "Hỗ trợ", "Tin tức", "Danh sách cửa hàng"]
 
   return (
     <header className='bg-white sticky top-0 min-[995px]:h-[80px] h-[60px] w-full shadow-md z-50'>
-      <div className='w-full h-full pl-[50px] pr-[50px] flex items-center justify-between'>
-        <div className='w-1/3 laptop:hidden'>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      <div className='w-full h-full pl-[50px] pr-[50px] flex items-center justify-between relative cursor-pointer'>
+        <button onClick={(e) => {
+
+          setIsOpen(isOpen ? false : true);
+          document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+
+
+        }} className='w-1/3 laptop:hidden'>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
 
-        </div>
+        </button>
+
+        <AnimatePresence>
+          {isOpen && <MobileBackDrop />}
+        </AnimatePresence>
 
         <div className='items-center h-full hidden min-[995px]:flex'>
           <Link href={'/'}>
