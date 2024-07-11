@@ -3,6 +3,7 @@ import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileFooter from "@/components/MobileFooter";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["vietnamese"],
@@ -21,10 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{minWidth : '1320px'}} suppressHydrationWarning={true} >
+      <body suppressHydrationWarning={true} >
         <Header />
         {children}
         <Footer />
+        <MobileFooter />
       </body>
     </html>
   );

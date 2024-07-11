@@ -1,26 +1,26 @@
 import React from 'react'
-import Button from './ui/Button';
+import Button from './ui/SaymeeButton';
 import { MotionDiv } from './ui/MotionDiv';
 
 export default function PickSimContainer() {
     return (
-        <div className='container mt-10 flex gap-7'>
-            <MotionDiv className='w-1/3' initial={{ opacity: 0, translateX: -100}}
+        <div className='container mt-10 flex flex-col laptop:flex-row gap-7 overflow-hidden mb-10'>
+            <MotionDiv className='w-full laptop:w-1/3' initial={{ opacity: 0, translateX: -100}}
                             whileInView={{ opacity: 1, translateX: 0}}
                             transition={{ duration: 0.5 }}>
                 <img src='saymee_sim_card.png'></img>
             </MotionDiv>
             <MotionDiv initial={{ opacity: 0, translateX: 100}}
                             whileInView={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 0.5 }} className='w-2/3 flex flex-col items-center space-y-6'>
+                            transition={{ duration: 0.5 }} className='w-full laptop:w-2/3 flex flex-col items-center space-y-6'>
                 <span className='text-[28px]' style={{ fontWeight: '700', lineHeight: '40px' }}>SIM Saymee, chọn là Mê</span>
                 <div className="grid grid-rows-3 grid-cols-2 gap-5 w-full ">
 
                     {Array.from({ length: 6 }).map((_, index) => {
                         return (
-                            <div className="rounded-lg shadow-md h-[90px] flex px-6 cursor-pointer hover:bg-[#FFECF9] justify-between" >
-                                <div style={{ fontSize: "20px", fontWeight: 600, lineHeight: "26px", letterSpacing: '1px' }} className='h-full items-center flex'>079 440 5241</div>
-                                <div className='h-full items-center flex font-semibold text-pinksaymee'>35.000đ
+                            <div className="rounded-lg shadow-md h-[90px] flex laptop:flex-row flex-col px-6 cursor-pointer hover:bg-[#FFECF9] justify-between" >
+                                <div style={{ fontWeight: 600, lineHeight: "26px", letterSpacing: '1px' }} className='h-full items-center flex laptop:text-[20px] text-[16px]'>079 440 5241</div>
+                                <div className='h-full items-center flex laptop:text-[20px] text-[16px] font-semibold  text-pinksaymee'>35.000đ
                                     <svg className='fill-pinksaymee' width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
                                         <g data-name="Layer 2">

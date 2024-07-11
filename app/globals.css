@@ -88,16 +88,14 @@ body {
 }
 
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
 }
-@media (min-width: 576px) {
+@media (min-width: 540px) {
   .container {
-    max-width: 540px;
+    max-width: 520px;
   }
 }
 @media (min-width: 768px) {

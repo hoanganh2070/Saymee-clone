@@ -3,7 +3,7 @@ import React from 'react'
 export default function
     () {
     return (
-        <footer className='ml-auto w-full mr-auto footer bg-[#E3FAF8]'>
+        <footer className='hidden laptop:block ml-auto w-full mr-auto footer bg-[#E3FAF8] sticky '>
             <div className='w-full h-fit flex pt-[3em] pb-[2em] container'>
                 <div className='flex-col w-1/3 space-y-2'>
                     <div className='font-bold text-[14px]'>Tổng công ty viện thông MobiFone</div>
@@ -62,13 +62,13 @@ export default function
                 <div className="flex-col w-1/6 space-y-4">
                     <div className='font-bold text-[14px] mb-3 rounded-lg'>Tải ngay app Saymee</div>
                     <div className='flex space-x-1'>
-                        <img src='saymee_qr.png' className='w-[41.6%]'></img>
+                        <img src='/saymee_qr.png' className='w-[41.6%]'></img>
                         <div className='flex flex-col justify-between'>
                             <div>
-                                <img src='google-play-badge.png'></img>
+                                <img src='/google-play-badge.png'></img>
                             </div>
                             <div>
-                                <img src='app-store-apple-logo.png'></img>
+                                <img src='/app-store-apple-logo.png'></img>
                             </div>
                         </div>
                     </div>

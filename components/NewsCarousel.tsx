@@ -14,11 +14,14 @@ import { NewsList } from "@/models/NewsList"
 import { MotionDiv } from "./ui/MotionDiv"
 export function NewsCarousel() {
     return (
-        <div className="w-full text-center mb-10">
-            <div className='text-[28px] mt-[40px] mb-[20px]' style={{ fontWeight: '700', lineHeight: '40px' }}>Bản tin Saymee</div>
+        <div className="w-full text-center mb-10 overflow-hidden">
+
+            <MotionDiv initial={{ opacity: 0, translateX: 200}}
+                            whileInView={{ opacity: 1, translateX: 0}}
+                            transition={{ duration: 1 }} className='text-[28px] mt-[40px] mb-[20px]' style={{ fontWeight: '700', lineHeight: '40px' }}>Bản tin Saymee</MotionDiv>
             <MotionDiv initial={{ opacity: 0, translateX: -200}}
                             whileInView={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 1 }}  className="container text-left">
+                            transition={{ duration: 1 }}  className="container text-left w-[90%]">
                 <Carousel
                     opts={{
                         align: "start",

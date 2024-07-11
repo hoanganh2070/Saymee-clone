@@ -14,11 +14,11 @@ import { ToppingList } from "@/models/ToppingList"
 import { MotionDiv } from "./ui/MotionDiv"
 export function ToppingCarousel() {
     return (
-        <div className="">
+        <div className="overflow-hidden">
             <div className='text-[28px] mt-[40px] mb-[20px]' style={{ fontWeight: '700', lineHeight: '40px' }}>Cùng các gói topping hấp dẫn</div>
             <MotionDiv initial={{ opacity: 0, translateX: -200}}
                             whileInView={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 1 }} className="container text-left">
+                            transition={{ duration: 1 }} className="container text-left w-[90%]">
                 <Carousel
                     opts={{
                         align: "start",
@@ -37,7 +37,7 @@ export function ToppingCarousel() {
                                             </img>
 
                                             <div className="ml-4 text2">{value.name}</div>
-                                            <div className="ml-4 flex-grow">free <span className="font-bold">Dung lượng truy cập {value.category}</span></div>
+                                            <div className="ml-4 flex-grow w-[75%]">free <span className="font-bold">Dung lượng truy cập {value.category}</span></div>
 
                                             <div className="ml-4 flex-grow">
                                                 <span className="text-pinksaymee font-bold text-[32px]">10K/</span>

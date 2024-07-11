@@ -3,11 +3,11 @@ import { MotionDiv } from './ui/MotionDiv'
 
 export default function AppContainer() {
     return (
-        <div className='container flex mt-[40px] overflow-hidden'>
+        <div className='container flex laptop:flex-row flex-col mt-[40px] overflow-hidden'>
             <MotionDiv initial={{ opacity: 0, translateX: 200}}
                             whileInView={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 1 }} className='w-1/2 flex flex-col  justify-center items-center'>
-                <div className='w-2/3'>
+                            transition={{ duration: 1 }} className='w-full laptop:w-1/2 flex flex-col  justify-center items-center'>
+                <div className='w-auto laptop:w-2/3 '>
                     <div className='font-bold text-[28px]'>Khám phá bản thân </div>
                     <div className='font-bold text-[28px]'>qua ứng dụng Saymee </div>
                     <div className='text-textslate text-[20px] mt-[10px]'>Cùng nhiều tiện ích và tính năng độc quyền</div>
@@ -32,7 +32,7 @@ export default function AppContainer() {
             </MotionDiv>
             <MotionDiv initial={{ opacity: 0, translateX: 200}}
                             whileInView={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 1 }} className='w-1/2'>
+                            transition={{ duration: 1 }} className='mt-16 w-full laptop:w-1/2 laptop:mt-0'>
                 <img src='/saymee_app.png'></img>
             </MotionDiv>
         </div>

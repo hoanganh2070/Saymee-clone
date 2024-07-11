@@ -6,7 +6,7 @@ import PickSimContainer from "@/components/PickSimContainer";
 import RootCarousel from "@/components/RootCarousel";
 import StepContainer from "@/components/StepContainer";
 import { ToppingCarousel } from "@/components/ToppingCarousel";
-import Button from "@/components/ui/Button";
+import Button from "@/components/ui/SaymeeButton";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <RootCarousel />
       <StepContainer />
       <PickSimContainer />
-      <div style={{ backgroundImage: "urL('/discoveryBG.png')", backgroundSize: 'contain' }} className="w-full text-center pt-[60px]">
+      <div style={{ backgroundImage: "urL('/discoveryBG.png')", backgroundSize: 'cover' }} className="w-full text-center pt-[60px] pb-9">
         <DataPackCarousel />
         <ToppingCarousel />
 

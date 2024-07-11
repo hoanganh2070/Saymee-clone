@@ -15,11 +15,11 @@ import { MotionDiv } from "./ui/MotionDiv"
 
 export function DataPackCarousel() {
     return (
-        <div className="">
+        <div className="overflow-hidden">
             <div className='text-[28px] mb-[20px]' style={{ fontWeight: '700', lineHeight: '40px' }}>Gói cước đi kèm nhiều bất ngờ</div>
             <MotionDiv initial={{ opacity: 0, translateX: -200}}
                             whileInView={{ opacity: 1, translateX: 0}}
-                            transition={{ duration: 1 }} className="container text-left">
+                            transition={{ duration: 1 }} className="container text-left w-[90%]">
                 <Carousel
                     opts={{
                         align: "start",
