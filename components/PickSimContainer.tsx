@@ -19,8 +19,8 @@ export default function PickSimContainer() {
                     {Array.from({ length: 6 }).map((_, index) => {
                         return (
                             <div className="rounded-lg shadow-md h-[90px] flex laptop:flex-row flex-col px-6 cursor-pointer hover:bg-[#FFECF9] justify-between" >
-                                <div style={{ fontWeight: 600, lineHeight: "26px", letterSpacing: '1px' }} className='h-full items-center flex laptop:text-[20px] text-[16px]'>079 440 5241</div>
-                                <div className='h-full items-center flex laptop:text-[20px] text-[16px] font-semibold  text-pinksaymee'>35.000đ
+                                <div style={{ fontWeight: 600, lineHeight: "26px", letterSpacing: '1px' }} className='h-full items-center flex laptop:text-[20px] text-[15px]'>079 440 5241</div>
+                                <div className='h-full items-center flex laptop:text-[20px] text-[15px] font-semibold  text-pinksaymee'>35.000đ
                                     <svg className='fill-pinksaymee' width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 
                                         <g data-name="Layer 2">

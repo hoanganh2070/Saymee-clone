@@ -24,7 +24,7 @@ export default function MobileBackDrop() {
                     arrNavItemLinks.map((item, index) => {
                         return (
                             <div className='cursor-pointer'>
-                                {item !== "Sản phẩm" && item !== "Tiện ích" && <Link href='/' className='font-bold text-[15px] pt-3 ml-10'>{item}</Link>}
+                                {item !== "Sản phẩm" && item !== "Tiện ích" && <Link href={item} className='font-bold text-[15px] pt-3 ml-10'>{item}</Link>}
                                 {item === "Sản phẩm" &&
                                     <>
                                         <span className='font-bold text-[15px] pt-3 ml-10'>{item}</span>
