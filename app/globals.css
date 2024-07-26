@@ -123,6 +123,12 @@ body {
   }
 }
 
+@media (min-width: 996px) {
+  body {
+    overflow: auto !important;
+  }
+}
+
 
 .footer {
   background: linear-gradient(90.24deg, rgba(25, 211, 197, 0.12) 4.63%, rgba(0, 113, 206, 0.12) 95.78%);

@@ -25,11 +25,10 @@ export async function generateMetadata({params} : Props){
 export async function generateStaticParams(){
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {next : {revalidate : 60}});
   const posts = await res.json();
-  const p = posts.map((post : any) => ({
+  return posts.map((post : any) => ({
     id: post.id.toString()
   }))
 
-  return p;
 }
 
 export default async function page({params} : Props) {
